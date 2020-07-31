@@ -21,8 +21,8 @@ const connection = require('./config/database')();
 let loginRouter = require('./routes/loginRoute');
 app.use('/', loginRouter);
 
-//let contactsRouter = require('./routes/contactsRoute');
-//app.use('/contacts', contactsRouter);
+let contactsRouter = require('./routes/contactsRoute');
+app.use('/contacts', contactsRouter);
 
 app.use((req, res, next) => {
   let err = new Error('Not Found');

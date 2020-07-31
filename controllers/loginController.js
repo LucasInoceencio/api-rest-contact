@@ -29,7 +29,6 @@ module.exports={
           token: null
         })
       } else {
-        console.log(contact);
         contact.comparePassword(password, (error, isMatch)=>{
           if(isMatch && error == null){
             contact.generateTokenJwt()
