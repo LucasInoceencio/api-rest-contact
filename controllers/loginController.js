@@ -11,7 +11,7 @@ module.exports={
 
     newContact.save()
     .then(contact => {
-      res.status(200).json({msg: "Usuário cadastrado com sucesso", contato: contact});
+      res.status(200).json({msg: "Usuário cadastrado com sucesso", contact: contact});
     })
     .catch(error => {
       res.status(500).json({msg: "Erro ao cadastrar contato.", error: error});
